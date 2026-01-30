@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.*;
 
 public class Main {
 
@@ -11,8 +12,15 @@ public class Main {
         rideBookingSystem.createRide(3,"Gurugram", "Faridabad", 2, 6,180.00,new user(3, "Jhatu",   "jhatu@mail.com",   "pass3"));
         rideBookingSystem.createRide(4,"Gurugram", "Delhi", 2, 5,80.00,new user(4, "Shalini", "shalini@mail.com", "pass4"));
         rideBookingSystem.createRide(5,"Gurugram", "Varanasi", 2, 5,340.00,new user(5, "beta",    "beta@mail.com",    "pass5"));
-        System.out.println(rideBookingSystem.showAllRide());
+        System.out.println(rideBookingSystem.searchRide("Gurugram","Delhi",2));
 
+        Connection conn =   DBConnection.getConnection();
+
+        if (conn != null) {
+            System.out.println("PostgreSQL connected successfully from Java!");
+        } else {
+            System.out.println("Database connection failed!");
+        }
     }
 }
 
