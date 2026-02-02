@@ -17,7 +17,7 @@ public class RideBookingSystem {
 
         user user = new user(user_id, name , email, password);
         users.add(user);
-        System.out.println("Signup successful for ");
+        System.out.println("Signup successful for "+name);
         return users;
 
     }
@@ -160,7 +160,7 @@ public class RideBookingSystem {
     }
 
 }
-//futur scope:
+//future scope:
 //time
 //Authentication & Authorization
 //admin
