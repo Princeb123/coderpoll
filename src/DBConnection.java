@@ -13,6 +13,7 @@ public class DBConnection {
             String password = "35011956";
 
             conn = DriverManager.getConnection(url, user, password);
+
             System.out.println("PostgreSQL Connected!");
 
         } catch (Exception e) {

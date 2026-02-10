@@ -4,8 +4,8 @@ import java.sql.*;
 
 public class Main {
 
-    public static void main(String[] args){
-        RideBookingSystem rideBookingSystem = new RideBookingSystem();
+        public static void main(String[] args){
+            RideBookingSystem rideBookingSystem = new RideBookingSystem();
 
         rideBookingSystem.createRide(1,"Jaipur", "Delhi", 5, 7,725.00,new user(1, "Prince",  "prince@mail.com",  "pass1"));
         rideBookingSystem.createRide(2,"Greater Noida", "Agra", 3, 5,340.00,new user(2, "Krishna", "krishna@mail.com", "pass2"));

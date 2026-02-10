@@ -1,7 +1,7 @@
 public class user {
     int user_id;
-    String name;
     String email;
+    String name;
     String password;
 
     @Override
