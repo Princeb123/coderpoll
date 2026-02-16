@@ -1,18 +1,9 @@
 public class user {
-    int user_id;
-    String email;
-    String name;
-    String password;
 
-    @Override
-    public String toString() {
-        return "user{" +
-                "user_id=" + user_id +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", password=" + password +
-                '}';
-    }
+    int user_id;
+    String name;
+    String email;
+    String password;
 
     public user(int user_id, String name, String email, String password) {
         this.user_id = user_id;
@@ -20,8 +11,8 @@ public class user {
         this.email = email;
         this.password = password;
     }
+
+    public String toString() {
+        return name;
+    }
 }
-//jpa
-//many to many entity persistence
-//one to one persistence
-//Apojo
