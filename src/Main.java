@@ -6,7 +6,7 @@ public class Main {
 
     static RideBookingSystem system = new RideBookingSystem();
     static Scanner sc = new Scanner(System.in);
-    static user loggedUser = null;
+    static User loggedUser = null;
 
     public static void main(String[] args) {
 

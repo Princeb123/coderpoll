@@ -5,9 +5,9 @@ public class Ride {
     String destination;
     int seats;
     double fare;
-    user user;
+    User user;
 
-    public Ride(int id, String source, String destination, int seats, double fare, user user) {
+    public Ride(int id, String source, String destination, int seats, double fare, User user) {
         this.id = id;
         this.source = source;
         this.destination = destination;

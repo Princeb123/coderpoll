@@ -7,9 +7,9 @@ import java.util.List;
 
 public class RideBookingSystem {
 
-    public user signup(String name, String email, String password) {
+    public User signup(String name, String email, String password) {
 
-        user user = null;
+        User user = null;
 
         try {
             Connection conn = DBConnection.getConnection();
@@ -33,7 +33,7 @@ public class RideBookingSystem {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 int id = rs.getInt("user_id");
-                user = new user(id, name, email, password);
+                user = new User(id, name, email, password);
                 System.out.println("Account created successfully");
             }
 
@@ -44,9 +44,9 @@ public class RideBookingSystem {
         return user;
     }
 
-    public user login(String email, String password) {
+    public User login(String email, String password) {
 
-        user user = null;
+        User user = null;
 
         try {
             Connection conn = DBConnection.getConnection();
@@ -60,7 +60,7 @@ public class RideBookingSystem {
             if (rs.next()) {
                 int id = rs.getInt("user_id");
                 String name = rs.getString("name");
-                user = new user(id, name, email, password);
+                user = new User(id, name, email, password);
                 System.out.println("Login Successful");
             } else {
                 System.out.println("Invalid login");
@@ -73,7 +73,7 @@ public class RideBookingSystem {
         return user;
     }
 
-    public int createRide(String source, String destination, int seats, double fare, user user) {
+    public int createRide(String source, String destination, int seats, double fare, User user) {
 
         int rideId = -1;
 
@@ -132,7 +132,7 @@ public class RideBookingSystem {
                 int uid = rs.getInt("user_id");
                 String uname = rs.getString("name");
 
-                user owner = new user(uid, uname, null, null);
+                User owner = new User(uid, uname, null, null);
                 Ride ride = new Ride(id, source, dest, 0, fare, owner);
                 rides.add(ride);
             }
@@ -144,7 +144,7 @@ public class RideBookingSystem {
         return rides;
     }
 
-    public void bookRide(int rideId, user user, int seats, int totalFare) {
+    public void bookRide(int rideId, User user, int seats, int totalFare) {
 
         try {
             Connection conn = DBConnection.getConnection();

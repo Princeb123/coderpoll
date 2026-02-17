@@ -1,11 +1,11 @@
-public class booking {
+public class Booking {
     int id;
     String source;
     String destination;
     int seats;
     double fare;
 
-    public booking(int id, String source, String destination, int seats, double fare) {
+    public Booking(int id, String source, String destination, int seats, double fare) {
         this.id = id;
         this.source = source;
         this.destination = destination;
